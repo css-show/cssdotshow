@@ -1,3 +1,3 @@
 export default function Hello() {
-  return <p>Hi, he.</p>;
+  return <p>你好，秀儿！</p>;
 }
