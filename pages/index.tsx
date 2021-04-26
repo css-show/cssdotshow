@@ -11,7 +11,7 @@ import { useQuery, gql } from '@apollo/client';
 
 const QUERY = gql`
   query GetLaunches {
-    launchesPast(limit: 100) {
+    launchesPast(limit: 50) {
       id
       mission_name
       launch_date_local
@@ -97,38 +97,38 @@ const Home = () => {
   );
 };
 
-export async function getStaticProps() {
-  // const allPostsData = getSortedPostsData();
-  const apolloClient = getApolloClient({});
-  // console.info('ApolloClient: ', apolloClient);
-  const { data, loading, error } = await apolloClient.query({
-    query: gql`
-      query GetLaunches {
-        launchesPast(limit: 10) {
-          id
-          mission_name
-          launch_date_local
-          launch_site {
-            site_name_long
-          }
-          links {
-            article_link
-            video_link
-            mission_patch
-          }
-          rocket {
-            rocket_name
-          }
-        }
-      }
-    `,
-  });
+// export async function getStaticProps() {
+//   // const allPostsData = getSortedPostsData();
+//   const apolloClient = getApolloClient({});
+//   // console.info('ApolloClient: ', apolloClient);
+//   const { data, loading, error } = await apolloClient.query({
+//     query: gql`
+//       query GetLaunches {
+//         launchesPast(limit: 10) {
+//           id
+//           mission_name
+//           launch_date_local
+//           launch_site {
+//             site_name_long
+//           }
+//           links {
+//             article_link
+//             video_link
+//             mission_patch
+//           }
+//           rocket {
+//             rocket_name
+//           }
+//         }
+//       }
+//     `,
+//   });
 
-  return {
-    props: {
-      launches: data.launchesPast,
-    },
-  };
-}
+//   return {
+//     props: {
+//       launches: data.launchesPast,
+//     },
+//   };
+// }
 
 export default Home;
