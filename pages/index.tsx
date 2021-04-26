@@ -11,7 +11,7 @@ import { useQuery, gql } from '@apollo/client';
 
 const QUERY = gql`
   query GetLaunches {
-    launchesPast(limit: 50) {
+    launchesPast(limit: 10) {
       id
       mission_name
       launch_date_local
