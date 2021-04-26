@@ -50,7 +50,7 @@ const QUERY = gql`
 
 const QUERYLIST = gql`
   query GetLaunchesID {
-    launchesPast(limit: 50) {
+    launchesPast(limit: 10) {
       id
     }
   }
@@ -74,19 +74,25 @@ export async function getStaticPaths() {
   };
 }
 
-export const getStaticProps = ({ params: { id } }) => ({
-  props: {
-    id,
-  },
-});
-
-export default function Post({ id }) {
-  const { data, loading, error } = useQuery(QUERY, {
+export const getStaticProps = async ({ params: { id } }) => {
+  const apolloClient = getApolloClient({});
+  const { data, loading, error } = await apolloClient.query({
+    query: QUERY,
     variables: {
       id,
     },
   });
 
+  return {
+    props: {
+      launch: data.launch,
+      loading: loading || false,
+      error: error || null,
+    },
+  };
+};
+
+export default function Post({ launch, loading, error }) {
   if (loading) {
     return <h2>Loading...</h2>;
   }
@@ -95,8 +101,6 @@ export default function Post({ id }) {
     console.error(error);
     return null;
   }
-
-  const launch = data.launch || {};
 
   return (
     <Layout>
