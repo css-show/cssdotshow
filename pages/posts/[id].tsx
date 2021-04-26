@@ -101,7 +101,7 @@ export default function Post({ launch, loading, error }) {
     console.error(error);
     return null;
   }
-
+  
   return (
     <Layout>
       <Head>
