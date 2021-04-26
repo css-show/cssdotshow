@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '@/lib/posts';
 import Layout from '@/components/layout';
 import { useQuery, gql } from '@apollo/client';
 import Date from '@/components/date';
+import { getApolloClient } from '@/lib/apollo';
 import utilStyles from '@/styles/utils.module.scss';
 
 const QUERY = gql`
@@ -47,12 +48,29 @@ const QUERY = gql`
   }
 `;
 
+const QUERYLIST = gql`
+  query GetLaunchesID {
+    launchesPast(limit: 50) {
+      id
+    }
+  }
+`;
+
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  // const paths = getAllPostIds();
+
+  const apolloClient = getApolloClient({});
+  const { data, loading, error } = await apolloClient.query({
+    query: QUERYLIST,
+  });
+  // Get the paths we want to pre-render based on posts
+  const paths = data.launchesPast.map(({ id }) => ({
+    params: { id },
+  }));
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -79,7 +97,7 @@ export default function Post({ id }) {
   }
 
   const launch = data.launch || {};
-  
+
   return (
     <Layout>
       <Head>

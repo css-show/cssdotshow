@@ -9,4 +9,8 @@ module.exports = {
   assetPrefix: isProd
     ? 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/'
     : '',
+  images: {
+    loader: 'imgix',
+    path: 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/',
+  },
 };
