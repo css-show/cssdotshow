@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[The CSS Show]]></title>
+    <description><![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通。]]></description>
+    <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg" />
+    <language>zh-cn</language>
+    <itunes:category text="Technology" />
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:author>
+      <![CDATA[张赫]]>
+    </itunes:author>
+    <link>https://css.show</link>
+    <itunes:owner>
+      <itunes:name>
+        <![CDATA[张赫]]>
+      </itunes:name>
+      <itunes:email>
+        <![CDATA[zhanghecool@outlook.com]]>
+      </itunes:email>
+    </itunes:owner>
+    <copyright>
+      <![CDATA[张赫 @The CSS Show]]>
+    </copyright>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://css.show/rss.xml" rel="self" type="application/rss+xml"/>
+    <itunes:subtitle>
+      <![CDATA[The CSS Show]]>
+    </itunes:subtitle>
+    <itunes:summary>
+      <![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通。]]>
+    </itunes:summary>
+    
+    <item>
+      <title><![CDATA[When to Use Static Generation v.s. Server-side Rendering]]></title>
+      <enclosure url="undefined" type="audio/mpeg" length="undefined" />
+      <itunes:image href=""></itunes:image>
+      <guid>https://css.show/posts/ssg-ssr</guid>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 GMT</pubDate>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <link>https://css.show/posts/ssg-ssr</link>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>
+        <![CDATA[张赫]]>
+      </itunes:author>
+      <itunes:subtitle>
+        <![CDATA[When to Use Static Generation v.s. Server-side Rendering]]>
+      </itunes:subtitle>
+      <itunes:duration></itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:season>1</itunes:season>
+    </item>
+
+    <item>
+      <title><![CDATA[Two Forms of Pre-rendering]]></title>
+      <enclosure url="undefined" type="audio/mpeg" length="undefined" />
+      <itunes:image href=""></itunes:image>
+      <guid>https://css.show/posts/pre-redering</guid>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
+      <description>
+        <![CDATA[]]>
+      </description>
+      <link>https://css.show/posts/pre-redering</link>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>
+        <![CDATA[张赫]]>
+      </itunes:author>
+      <itunes:subtitle>
+        <![CDATA[Two Forms of Pre-rendering]]>
+      </itunes:subtitle>
+      <itunes:duration></itunes:duration>
+      <itunes:episode></itunes:episode>
+      <itunes:season></itunes:season>
+    </item>
+
+  </channel>
+</rss>
