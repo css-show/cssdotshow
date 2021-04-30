@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import Layout from '@/components/layout';
-import { useQuery, gql } from '@apollo/client';
+import { gql } from '@apollo/client';
 import Date from '@/components/date';
 import { getApolloClient } from '@/lib/apollo';
 import utilStyles from '@/styles/utils.module.scss';
@@ -57,16 +57,7 @@ const QUERYLIST = gql`
 `;
 
 export async function getStaticPaths() {
-  // const paths = getAllPostIds();
-
-  const apolloClient = getApolloClient({});
-  const { data, loading, error } = await apolloClient.query({
-    query: QUERYLIST,
-  });
-  // Get the paths we want to pre-render based on posts
-  const paths = data.launchesPast.map(({ id }) => ({
-    params: { id },
-  }));
+  const paths = getAllPostIds();
 
   return {
     paths,
@@ -75,46 +66,27 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params: { id } }) => {
-  const apolloClient = getApolloClient({});
-  const { data, loading, error } = await apolloClient.query({
-    query: QUERY,
-    variables: {
-      id,
-    },
-  });
+  const postData = await getPostData(id);
 
   return {
     props: {
-      launch: data.launch,
-      loading: loading || false,
-      error: error || null,
+      postData,
     },
   };
 };
 
-export default function Post({ launch, loading, error }) {
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
-  if (error) {
-    console.error(error);
-    return null;
-  }
-
+export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{launch.mission_name}</title>
+        <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>
-          {launch.launch_site.site_name_long}
-        </h1>
+        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={launch.launch_date_utc} />
+          <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: launch.details }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
   );

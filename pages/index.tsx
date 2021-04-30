@@ -1,93 +1,35 @@
-// import { FC } from 'react';
+import fs from 'fs';
+import path from 'path';
 import Head from 'next/head';
 import Link from 'next/link';
 import Date from '@/components/date';
 import Layout, { siteTitle } from '@/components/layout';
 // import styles from '@/styles/Home.module.scss';
 import utilStyles from '@/styles/utils.module.scss';
-// import { getAllPostIds, getSortedPostsData } from '@/lib/posts';
-import { getApolloClient } from '@/lib/apollo';
-import { useQuery, gql } from '@apollo/client';
+import { getAllPostIds, getSortedPostsData } from '@/lib/posts';
+import generateRss from '@/lib/rss';
 
-const QUERY = gql`
-  query GetLaunches {
-    launchesPast(limit: 10) {
-      id
-      mission_name
-      launch_date_local
-      launch_site {
-        site_name_long
-      }
-      links {
-        article_link
-        video_link
-        mission_patch
-      }
-      rocket {
-        rocket_name
-      }
-    }
-  }
-`;
-
-// interface LaunchesItem {
-//   id: string;
-//   mission_name: string;
-//   launch_date_local: string;
-//   launch_site: {
-//     site_name_long: string;
-//   };
-//   links: {
-//     article_link: string;
-//     video_link: string;
-//     mission_patch: string;
-//   };
-//   rocket: {
-//     rocket_name: string;
-//   };
-// }
-
-// export interface HomeProps {
-//   launches: LaunchesItem[];
-// }
-
-const Home = () => {
-  const { data, loading, error } = useQuery(QUERY);
-
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
-  if (error) {
-    console.error(error);
-    return null;
-  }
-
-  const launches = data.launchesPast || [];
-
+const publicRssDirectory = path.join(process.cwd(), 'public', 'rss.xml');
+const Home = ({ allPostsData }) => {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>只需要一分钟就能学会，却要用一辈子的时间去精通</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {launches.map(({ id, mission_name, launch_date_local }) => (
+          {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
-                <a>{mission_name}</a>
+                <a>{title}</a>
               </Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={launch_date_local} />
+                <Date dateString={date} />
               </small>
             </li>
           ))}
@@ -97,38 +39,17 @@ const Home = () => {
   );
 };
 
-// export async function getStaticProps() {
-//   // const allPostsData = getSortedPostsData();
-//   const apolloClient = getApolloClient({});
-//   // console.info('ApolloClient: ', apolloClient);
-//   const { data, loading, error } = await apolloClient.query({
-//     query: gql`
-//       query GetLaunches {
-//         launchesPast(limit: 10) {
-//           id
-//           mission_name
-//           launch_date_local
-//           launch_site {
-//             site_name_long
-//           }
-//           links {
-//             article_link
-//             video_link
-//             mission_patch
-//           }
-//           rocket {
-//             rocket_name
-//           }
-//         }
-//       }
-//     `,
-//   });
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  const rss = await generateRss(allPostsData);
 
-//   return {
-//     props: {
-//       launches: data.launchesPast,
-//     },
-//   };
-// }
+  fs.writeFileSync(publicRssDirectory, rss);
+
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
 
 export default Home;
