@@ -22,7 +22,7 @@
     <copyright>
       <![CDATA[张赫 @The CSS Show]]>
     </copyright>
-    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://css.show/rss.xml" rel="self" type="application/rss+xml"/>
     <itunes:subtitle>
       <![CDATA[The CSS Show]]>
@@ -32,47 +32,25 @@
     </itunes:summary>
     
     <item>
-      <title><![CDATA[When to Use Static Generation v.s. Server-side Rendering]]></title>
-      <enclosure url="undefined" type="audio/mpeg" length="undefined" />
-      <itunes:image href=""></itunes:image>
-      <guid>https://css.show/posts/ssg-ssr</guid>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 GMT</pubDate>
+      <title><![CDATA[你好，CSS]]></title>
+      <enclosure url="https://cdn.jsdelivr.net/gh/zhanghecool/podcasts@main/audio/hello.mp3" type="audio/mpeg" length="6903400" />
+      <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg"></itunes:image>
+      <guid>https://css.show/posts/hello</guid>
+      <pubDate>Wed, 06 May 2020 00:00:00 GMT</pubDate>
       <description>
-        <![CDATA[]]>
+        <![CDATA[CSS Show]]>
       </description>
-      <link>https://css.show/posts/ssg-ssr</link>
+      <link>https://css.show/posts/hello</link>
       <itunes:explicit>false</itunes:explicit>
       <itunes:author>
         <![CDATA[张赫]]>
       </itunes:author>
       <itunes:subtitle>
-        <![CDATA[When to Use Static Generation v.s. Server-side Rendering]]>
+        <![CDATA[你好，CSS]]>
       </itunes:subtitle>
-      
+      <itunes:duration>267</itunes:duration>
       <itunes:episode>1</itunes:episode>
       <itunes:season>1</itunes:season>
-    </item>
-
-    <item>
-      <title><![CDATA[Two Forms of Pre-rendering]]></title>
-      <enclosure url="undefined" type="audio/mpeg" length="undefined" />
-      <itunes:image href=""></itunes:image>
-      <guid>https://css.show/posts/pre-redering</guid>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
-      <description>
-        <![CDATA[]]>
-      </description>
-      <link>https://css.show/posts/pre-redering</link>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>
-        <![CDATA[张赫]]>
-      </itunes:author>
-      <itunes:subtitle>
-        <![CDATA[Two Forms of Pre-rendering]]>
-      </itunes:subtitle>
-      
-      
-      
     </item>
 
   </channel>
