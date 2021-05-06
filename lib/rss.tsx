@@ -9,29 +9,43 @@ const LANGUAGE = 'zh-cn';
 const CATEGORY = 'Technology';
 const PODCAST_IMAGE =
   'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg';
-const generateRssItem = (post: Post): string => `
+const generateRssItem = ({
+  title,
+  audioUrl,
+  audioLength,
+  audioTime,
+  audioType,
+  audioTypeName,
+  image,
+  id,
+  date,
+  description,
+  explicit,
+  episode,
+  season,
+}: Post): string => `
     <item>
-      <title><![CDATA[${post.title || ''}]]></title>
-      <enclosure url="${post.audioUrl}" type="${post.audioType || 'audio'}/${
-  post.audioTypeName || 'mpeg'
-}" length="${post.audioLength}" />
-      <itunes:image href="${post.image || ''}"></itunes:image>
-      <guid>${SITE_URL}/posts/${post.id}</guid>
-      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <title><![CDATA[${title || ''}]]></title>
+      <enclosure url="${audioUrl}" type="${audioType || 'audio'}/${
+  audioTypeName || 'mpeg'
+}" length="${audioLength}" />
+      <itunes:image href="${image || ''}"></itunes:image>
+      <guid>${SITE_URL}/posts/${id}</guid>
+      <pubDate>${new Date(date).toUTCString()}</pubDate>
       <description>
-        <![CDATA[${post.description || ''}]]>
+        <![CDATA[${description || ''}]]>
       </description>
-      <link>${SITE_URL}/posts/${post.id}</link>
-      <itunes:explicit>${post.explicit || 'false'}</itunes:explicit>
+      <link>${SITE_URL}/posts/${id}</link>
+      <itunes:explicit>${explicit || 'false'}</itunes:explicit>
       <itunes:author>
         <![CDATA[${AUTHOR}]]>
       </itunes:author>
       <itunes:subtitle>
-        <![CDATA[${post.title || ''}]]>
+        <![CDATA[${title || ''}]]>
       </itunes:subtitle>
-      <itunes:duration>${post.audioTime || ''}</itunes:duration>
-      <itunes:episode>${post.episode || ''}</itunes:episode>
-      <itunes:season>${post.season || ''}</itunes:season>
+      ${audioTime ? `<itunes:duration>${audioTime}</itunes:duration>` : ''}
+      ${episode ? `<itunes:episode>${episode}</itunes:episode>` : ''}
+      ${season ? `<itunes:season>${season}</itunes:season>` : ''}
     </item>
 `;
 

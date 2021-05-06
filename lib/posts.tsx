@@ -10,7 +10,16 @@ export interface Post {
   id: string;
   date?: string;
   title?: string;
-  [name: string]: string;
+  audioUrl?: string;
+  audioType?: string;
+  audioTypeName?: string;
+  audioLength?: number;
+  image?: string;
+  description?: string;
+  explicit?: boolean;
+  audioTime?: number;
+  episode?: number;
+  season?: number;
 }
 
 export function getSortedPostsData() {
