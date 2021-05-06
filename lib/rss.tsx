@@ -16,7 +16,7 @@ const generateRssItem = ({
   audioTime,
   audioType,
   audioTypeName,
-  image,
+  image = PODCAST_IMAGE,
   id,
   date,
   description,
@@ -29,11 +29,11 @@ const generateRssItem = ({
       <enclosure url="${audioUrl}" type="${audioType || 'audio'}/${
   audioTypeName || 'mpeg'
 }" length="${audioLength}" />
-      <itunes:image href="${image || ''}"></itunes:image>
+      ${image ? `<itunes:image href="${image}"></itunes:image>` : ''}
       <guid>${SITE_URL}/posts/${id}</guid>
       <pubDate>${new Date(date).toUTCString()}</pubDate>
       <description>
-        <![CDATA[${description || ''}]]>
+        <![CDATA[${description || 'CSS Show'}]]>
       </description>
       <link>${SITE_URL}/posts/${id}</link>
       <itunes:explicit>${explicit || 'false'}</itunes:explicit>
