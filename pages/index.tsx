@@ -4,7 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Date from '@/components/date';
 import Layout, { siteTitle } from '@/components/layout';
-// import styles from '@/styles/Home.module.scss';
 import utilStyles from '@/styles/utils.module.scss';
 import { getAllPostIds, getSortedPostsData } from '@/lib/posts';
 import generateRss from '@/lib/rss';

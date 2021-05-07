@@ -15,7 +15,7 @@ export interface LayoutProps {
 
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className={styles.container}>
+    <div className="container mx-auto px-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
