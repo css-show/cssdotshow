@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://css.show/">
-    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg" alt="Bootstrap logo" width="200" height="200">
+    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="200">
   </a>
 </p>
 
