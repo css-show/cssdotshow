@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://css.show/">
-    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="200">
+    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/public/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="200">
   </a>
 </p>
 
