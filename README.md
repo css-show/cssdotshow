@@ -1,20 +1,37 @@
-# CSS.SHOW [![CI](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml/badge.svg)](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml)
+<p align="center">
+  <a href="https://css.show/">
+    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg" alt="Bootstrap logo" width="200" height="200">
+  </a>
+</p>
 
-The CSS Show
+<h3 align="center">The CSS Show</h3>
 
-### 文章顶部 YML 配置
+<p align="center">
+  只需要一分钟就能学会，却要用一辈子的时间去精通
+  <br>
+  <a href="https://css.show/"><strong>去学习 »</strong></a>
+  <br>
+  <br>
+</p>
+
+## 文章顶部 YML 配置说明
 
 ```yml
 ---
-title: '欢迎来到 CSS 秀儿'
-date: '2020-04-30'
-episode: 1
+title: '你好，CSS'
+date: '2020-05-06'
+audioUrl: ''
+audioType: 'audio'
+audioTypeName: 'mpeg'
+audioLength: 6903400
+audioTime: 267
 season: 1
+episode: 1
 ---
 
 ```
 
-#### YML 配置说明
+## YML 配置
 
 1. title: 标题（）
 2. date: 发表时间（）
@@ -43,3 +60,9 @@ season: 1
 | audioTime     |      Media duration      |          |
 | season        |  Episode season number   |        1 |
 | episode       |    An episode number     |        1 |
+
+[![CI](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml/badge.svg)](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml)
+
+## Author
+
+[@zhanghecool](https://github.com/zhanghecool)

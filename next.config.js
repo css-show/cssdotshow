@@ -1,5 +1,6 @@
 const isProd = process.env.NODE_ENV === 'production';
 const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/';
+const path = isProd ? cdnPath : '/';
 
 module.exports = {
   reactStrictMode: true,
@@ -7,9 +8,9 @@ module.exports = {
     webpack5: true,
   },
   // Use the CDN in production and localhost for development.
-  assetPrefix: isProd ? cdnPath : '',
+  assetPrefix: path,
   images: {
     loader: 'imgix',
-    path: cdnPath,
+    path,
   },
 };

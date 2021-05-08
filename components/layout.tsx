@@ -1,7 +1,6 @@
 import { ReactNode, FC } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from './layout.module.scss';
 import utilStyles from '@/styles/utils.module.scss';
 import Link from 'next/link';
 
@@ -15,11 +14,11 @@ export interface LayoutProps {
 
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto p-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>
+      <header className="">
         {home ? (
           <>
             <Image
@@ -56,7 +55,7 @@ export default function Layout({ children, home }: LayoutProps) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
