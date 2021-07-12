@@ -61,6 +61,7 @@ episode: 1
 | season        |  Episode season number   |        1 |
 | episode       |    An episode number     |        1 |
 
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/zhanghecool/cssdotshow)
 [![CI](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml/badge.svg)](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml)
 
 ## Author
