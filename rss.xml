@@ -3,7 +3,7 @@
   <channel>
     <title><![CDATA[The CSS Show]]></title>
     <description><![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通。]]></description>
-    <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg" />
+    <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.png" />
     <language>zh-cn</language>
     <itunes:category text="Technology" />
     <itunes:explicit>false</itunes:explicit>
@@ -34,7 +34,7 @@
     <item>
       <title><![CDATA[你好，CSS]]></title>
       <enclosure url="https://cdn.jsdelivr.net/gh/zhanghecool/podcasts@main/audio/hello.mp3" type="audio/mpeg" length="6903400" />
-      <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg"></itunes:image>
+      <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.png"></itunes:image>
       <guid>https://css.show/posts/hello</guid>
       <pubDate>Wed, 06 May 2020 00:00:00 GMT</pubDate>
       <description>
