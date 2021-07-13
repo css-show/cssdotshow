@@ -8,7 +8,7 @@ const DESCRIPTION = '只需要一分钟就能学会，却要用一辈子的时�
 const LANGUAGE = 'zh-cn';
 const CATEGORY = 'Technology';
 const PODCAST_IMAGE =
-  'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg';
+  'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.png';
 const generateRssItem = ({
   title,
   audioUrl,
