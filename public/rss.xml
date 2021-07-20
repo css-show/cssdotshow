@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:anchor="https://anchor.fm/xmlns">
   <channel>
     <title><![CDATA[The CSS Show]]></title>
     <description><![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通。]]></description>
+    <link>https://css.show</link>
+    <image>
+      <url>https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg</url>
+      <title>The CSS Show</title>
+      <link>https://css.show</link>
+    </image>
     <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg" />
-    <language>zh-cn</language>
+    <language>chi</language>
     <itunes:category text="Technology" />
     <itunes:explicit>false</itunes:explicit>
     <itunes:author>
       <![CDATA[张赫]]>
     </itunes:author>
-    <link>https://css.show</link>
+    <itunes:summary>
+      <![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通。]]>
+    </itunes:summary>
+    <itunes:type>serial</itunes:type>
     <itunes:owner>
       <itunes:name>
         <![CDATA[张赫]]>
@@ -23,13 +32,10 @@
       <![CDATA[张赫 @The CSS Show]]>
     </copyright>
     <lastBuildDate>Wed, 06 May 2020 00:00:00 GMT</lastBuildDate>
-    <atom:link href="https://css.show/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://css.show/rss" rel="self" type="application/rss+xml"/>
     <itunes:subtitle>
       <![CDATA[The CSS Show]]>
     </itunes:subtitle>
-    <itunes:summary>
-      <![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通。]]>
-    </itunes:summary>
     
     <item>
       <title><![CDATA[你好，CSS]]></title>
