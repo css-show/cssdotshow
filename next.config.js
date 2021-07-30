@@ -1,4 +1,5 @@
-import withPWA, { cache } from 'next-pwa';
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
 const isProd = process.env.NODE_ENV === 'production';
 const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/';
 const path = isProd ? cdnPath : '/';
@@ -13,7 +14,7 @@ module.exports = withPWA({
   },
   pwa: {
     dest: 'public',
-    runtimeCaching: cache,
+    runtimeCaching,
     disable: !isProd,
     fallbacks: {
       // image: '/static/images/fallback.png',
