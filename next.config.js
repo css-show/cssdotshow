@@ -1,8 +1,9 @@
+import withPWA, { cache } from 'next-pwa';
 const isProd = process.env.NODE_ENV === 'production';
 const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/';
 const path = isProd ? cdnPath : '/';
 
-module.exports = {
+module.exports = withPWA({
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.
   assetPrefix: path,
@@ -10,4 +11,16 @@ module.exports = {
     loader: 'imgix',
     path,
   },
-};
+  pwa: {
+    dest: 'public',
+    runtimeCaching: cache,
+    disable: !isProd,
+    fallbacks: {
+      // image: '/static/images/fallback.png',
+      // document: '/other-offline',  // if you want to fallback to a custom page other than /_offline
+      // font: '/static/font/fallback.woff2',
+      // audio: ...,
+      // video: ...,
+    },
+  },
+});
