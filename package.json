@@ -7,11 +7,9 @@
     "build": "next build && next export"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.15",
     "bootstrap-icons": "^1.4.1",
     "classnames": "^2.3.1",
     "date-fns": "^2.21.1",
-    "graphql": "^15.5.0",
     "gray-matter": "^4.0.3",
     "next": "^11.0.0",
     "next-pwa": "^5.2.24",
