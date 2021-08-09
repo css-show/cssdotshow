@@ -44,8 +44,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: static
-          FOLDER: out
-          CLEAN: true
-          CLEAN_EXCLUDE: '["CNAME", ".nojekyll"]'
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: static
+          folder: out
+          clean: true
+          clean-exclude: '["CNAME", ".nojekyll"]'
