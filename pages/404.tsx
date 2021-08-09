@@ -9,7 +9,7 @@ export default function Custom404() {
         <title>页面没找到</title>
       </Head>
       <section className="filter drop-shadow-lg animate-pulse">
-        <h1 className="">404 - Page Not Found</h1>
+        <h1 className="">404 - 页面没找到</h1>
         <Link href="/">回到首页</Link>
       </section>
     </Layout>
