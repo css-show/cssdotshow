@@ -42,10 +42,10 @@ jobs:
           ls out
           
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.2
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          branch: static
-          folder: out
-          clean: true
+          BRANCH: static
+          FOLDER: out
+          CLEAN: true
           clean-exclude: '["CNAME", ".nojekyll"]'
