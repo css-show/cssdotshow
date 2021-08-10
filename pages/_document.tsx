@@ -51,19 +51,6 @@ class AppDocument extends Document {
           sizes="167x167"
           href="/apple-icon-180x180.png"
         />
-
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -98,6 +85,18 @@ class AppDocument extends Document {
           rel="apple-touch-icon"
           sizes="144x144"
           href="/apple-icon-144x144.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
         />
         <link
           rel="icon"
