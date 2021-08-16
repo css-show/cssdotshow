@@ -16,12 +16,12 @@ module.exports = withPWA({
     dest: 'public',
     runtimeCaching,
     disable: !isProd,
-    fallbacks: {
-      // image: '/static/images/fallback.png',
-      // document: '/other-offline',  // if you want to fallback to a custom page other than /_offline
-      // font: '/static/font/fallback.woff2',
-      // audio: ...,
-      // video: ...,
-    },
+    // fallbacks: {
+    // image: '/static/images/fallback.png',
+    // document: '/other-offline',  // if you want to fallback to a custom page other than /_offline
+    // font: '/static/font/fallback.woff2',
+    // audio: ...,
+    // video: ...,
+    // },
   },
 });
