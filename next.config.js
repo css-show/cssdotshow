@@ -1,17 +1,20 @@
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 const isProd = process.env.NODE_ENV === 'production';
-const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/';
-const path = isProd ? cdnPath : '/';
+const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages';
+const path = isProd ? cdnPath : '';
+const imageConfig = isProd
+  ? {
+      loader: 'imgix',
+      path,
+    }
+  : undefined;
 
 module.exports = withPWA({
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.
   assetPrefix: path,
-  images: {
-    loader: 'imgix',
-    path,
-  },
+  images: imageConfig,
   pwa: {
     dest: 'public',
     runtimeCaching,

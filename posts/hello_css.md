@@ -1,13 +1,13 @@
 ---
-title: '大家好，The CSS Show 开播啦'
-date: '2020-05-06'
+title: '你好，CSS'
+date: '2021-08-18'
 audioUrl: 'https://cdn.jsdelivr.net/gh/zhanghecool/podcasts@main/audio/hello.mp3'
 audioType: 'audio'
 audioTypeName: 'mpeg'
 audioLength: 6903400
 audioTime: 267
 season: 1
-episode: 1
+episode: 2
 ---
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.

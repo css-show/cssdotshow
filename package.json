@@ -38,8 +38,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      "jamstack"
+      "main"
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
