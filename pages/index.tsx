@@ -95,7 +95,7 @@ const Home = ({ allPostsData }) => {
                   href="#"
                   className="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
                 >
-                  Shop Collection
+                  搜索文章
                 </a>
               </div>
             </div>
@@ -103,7 +103,7 @@ const Home = ({ allPostsData }) => {
         </div>
       </div>
       <section className="container mx-auto px-5">
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>最新文章</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
