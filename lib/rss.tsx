@@ -1,10 +1,11 @@
 import { Post } from './posts';
+import { title, slogan } from '@/lib/config';
 
 const AUTHOR = '张赫';
 const EMAIL = 'zhanghecool@outlook.com';
-const PODCAST_NAME = 'The CSS Show';
+const PODCAST_NAME = title;
 const SITE_URL = 'https://css.show';
-const DESCRIPTION = '只需要一分钟就能学会，却要用一辈子的时间去精通。';
+const DESCRIPTION = slogan;
 const LANGUAGE = 'zh';
 const CATEGORY = 'Technology';
 const TYPE = 'serial'; // episodic，serial

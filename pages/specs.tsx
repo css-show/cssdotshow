@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '@/components/layout';
+import { title } from '@/lib/config';
+import Layout from '@/components/layout';
 
 export default function Specs() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{title}</title>
       </Head>
       <h1>标准</h1>
     </Layout>

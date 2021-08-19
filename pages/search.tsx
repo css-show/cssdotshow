@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '@/components/layout';
+import { title } from '@/lib/config';
+import Layout from '@/components/layout';
 
 export default function Search() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{title}</title>
       </Head>
       <h1>搜索</h1>
     </Layout>

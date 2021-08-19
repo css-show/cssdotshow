@@ -2,25 +2,32 @@ import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
+// import { useTranslation } from 'next-i18next';
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { title, slogan } from '@/lib/config';
 import Date from '@/components/date';
-import Layout, { siteTitle } from '@/components/layout';
+import Layout from '@/components/layout';
 import utilStyles from '@/styles/utils.module.scss';
 import { getSortedPostsData } from '@/lib/posts';
 import generateRss from '@/lib/rss';
 
 const publicRssDirectory = path.join(process.cwd(), 'public', 'rss.xml');
 const Home = ({ allPostsData }) => {
+  // const { t } = useTranslation('common');
+  // console.info('T("title"): ', t('title'));
+
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{title}</title>
       </Head>
       <div className="relative bg-white overflow-hidden">
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
               <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                只需要一分钟就能学会，却要用一辈子的时间去精通
+                {slogan}
               </h1>
             </div>
             <div>
@@ -34,37 +41,42 @@ const Home = ({ allPostsData }) => {
                     <div className="flex items-center space-x-6 lg:space-x-8">
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
-                            alt=""
                             className="w-full h-full object-center object-cover"
+                            alt="头图"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                            alt=""
+                            alt="头图"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                       </div>
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
@@ -73,14 +85,16 @@ const Home = ({ allPostsData }) => {
                       </div>
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
+                          <Image
+                            priority
                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                             alt=""
                             className="w-full h-full object-center object-cover"
@@ -120,15 +134,17 @@ const Home = ({ allPostsData }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const allPostsData = getSortedPostsData();
   const rss = await generateRss(allPostsData);
 
   fs.writeFileSync(publicRssDirectory, rss);
+  console.info('Locale: ', locale);
 
   return {
     props: {
       allPostsData,
+      // ...(await serverSideTranslations(locale, ['common'])),
     },
   };
 }

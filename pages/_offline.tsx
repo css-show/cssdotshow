@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout, { siteTitle } from '@/components/layout';
+// import { title } from '@/lib/config';
+import Layout from '@/components/layout';
 
 export default function Offline() {
   return (

@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
+import { title, slogan } from '@/lib/config';
 
 class AppDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -19,14 +20,11 @@ class AppDocument extends Document {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
-        <meta name="application-name" content="The CSS Show" />
+        <meta name="application-name" content={title} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="The CSS Show" />
-        <meta
-          name="description"
-          content="只需要一分钟就能学会，却要用一辈子的时间去精通。"
-        />
+        <meta name="apple-mobile-web-app-title" content={title} />
+        <meta name="description" content={slogan} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
