@@ -40,63 +40,70 @@ const Home = ({ allPostsData }) => {
                   <div className="absolute sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                     <div className="flex items-center space-x-6 lg:space-x-8">
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                            src="/images/ho1.jpg"
                             className="w-full h-full object-center object-cover"
                             alt="头图"
+                            layout="fill"
                           />
                         </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                            src="/images/ho2.jpg"
                             alt="头图"
+                            layout="fill"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                       </div>
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                            alt=""
+                            src="/images/ho3.jpg"
+                            alt="头图"
+                            layout="fill"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                            alt=""
+                            src="/images/ho4.jpg"
+                            alt="头图"
+                            layout="fill"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
-                            alt=""
+                            src="/images/ho5.jpg"
+                            alt="头图"
+                            layout="fill"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                       </div>
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
-                            alt=""
+                            src="/images/ho5.jpg"
+                            alt="头图"
+                            layout="fill"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <div className="relative w-44 h-64 rounded-lg overflow-hidden">
                           <Image
                             priority
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
-                            alt=""
+                            src="/images/ho7.jpg"
+                            alt="头图"
+                            layout="fill"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
