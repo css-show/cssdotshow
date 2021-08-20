@@ -2,21 +2,21 @@ const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 // const { i18n } = require('./next-i18next.config');
 const isProd = process.env.NODE_ENV === 'production';
-// const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages';
-// const path = isProd ? cdnPath : '';
-// const imageConfig = isProd
-//   ? {
-//       loader: 'imgix',
-//       path,
-//     }
-//   : undefined;
+const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages';
+const path = isProd ? cdnPath : '';
+const imageConfig = isProd
+  ? {
+      loader: 'imgix',
+      path,
+    }
+  : undefined;
 
 module.exports = withPWA({
   // i18n,
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.
-  // assetPrefix: path,
-  // images: imageConfig,
+  assetPrefix: path,
+  images: imageConfig,
   pwa: {
     dest: 'public',
     runtimeCaching,
