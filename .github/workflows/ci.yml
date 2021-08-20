@@ -55,3 +55,13 @@ jobs:
           FOLDER: out
           CLEAN: true
           CLEAN_EXCLUDE: '["CNAME", ".nojekyll"]'
+          
+      - name: Deploy to Tencent CloudBase
+        uses: TencentCloudBase/cloudbase-action@v2
+        env:
+          ENV_ID: ${{secrets.envId}}
+          accessToken: ${{ secrets.accessToken }}
+        with:
+          secretId: ${{secrets.secretId}}
+          secretKey: ${{secrets.secretKey}}
+          envId: ${{secrets.envId}}
