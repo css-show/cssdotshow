@@ -35,6 +35,27 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div id="disqus_thread"></div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var disqus_config = function () {
+              this.page.url = "https://css.show/posts/${postData.id}";
+              this.page.identifier = "${postData.id}";
+              };
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://the-css-show.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();`,
+          }}
+        />
+        <noscript>
+          Please enable JavaScript to view the{' '}
+          <a href="https://disqus.com/?ref_noscript">
+            comments powered by Disqus.
+          </a>
+        </noscript>
       </article>
     </Layout>
   );
