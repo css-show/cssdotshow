@@ -5,11 +5,11 @@
     <description><![CDATA[只需要一分钟就能学会，却要用一辈子的时间去精通]]></description>
     <link>https://css.show</link>
     <image>
-      <url>https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg</url>
+      <url>https://css.show/images/profile.jpg</url>
       <title>THE CSS SHOW</title>
       <link>https://css.show</link>
     </image>
-    <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg" />
+    <itunes:image href="https://css.show/images/profile.jpg" />
     <language>zh</language>
     <itunes:category text="Technology" />
     <itunes:explicit>false</itunes:explicit>
@@ -40,7 +40,7 @@
     <item>
       <title><![CDATA[你好，CSS]]></title>
       <enclosure url="https://cdn.jsdelivr.net/gh/zhanghecool/podcasts@main/audio/hello.mp3" type="audio/mpeg" length="6903400" />
-      <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg"></itunes:image>
+      <itunes:image href="https://css.show/images/profile.jpg"></itunes:image>
       <guid>https://css.show/posts/hello_css</guid>
       <pubDate>Wed, 18 Aug 2021 00:00:00 GMT</pubDate>
       <description>
@@ -62,7 +62,7 @@
     <item>
       <title><![CDATA[大家好，The CSS Show 开播啦]]></title>
       <enclosure url="https://cdn.jsdelivr.net/gh/zhanghecool/podcasts@main/audio/hello.mp3" type="audio/mpeg" length="6903400" />
-      <itunes:image href="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg"></itunes:image>
+      <itunes:image href="https://css.show/images/profile.jpg"></itunes:image>
       <guid>https://css.show/posts/hello</guid>
       <pubDate>Wed, 06 May 2020 00:00:00 GMT</pubDate>
       <description>
