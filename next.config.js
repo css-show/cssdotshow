@@ -4,19 +4,25 @@ const runtimeCaching = require('next-pwa/cache');
 const isProd = process.env.NODE_ENV === 'production';
 // const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages';
 // const path = isProd ? cdnPath : '';
-const imageConfig = isProd
-  ? {
-      loader: 'imgix',
-      // path,
-    }
-  : undefined;
+// const imageConfig = isProd
+//   ? {
+//       loader: 'imgix',
+//       path,
+//     }
+//   : undefined;
 
 module.exports = withPWA({
   // i18n,
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.
   // assetPrefix: path,
-  images: imageConfig,
+  // images: imageConfig,
+  images: isProd
+    ? {
+        loader: 'imgix',
+        path: 'https://css.show',
+      }
+    : undefined,
   pwa: {
     dest: 'public',
     runtimeCaching,
