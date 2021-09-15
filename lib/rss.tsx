@@ -9,8 +9,7 @@ const DESCRIPTION = slogan;
 const LANGUAGE = 'zh';
 const CATEGORY = 'Technology';
 const TYPE = 'serial'; // episodic，serial
-const PODCAST_IMAGE =
-  'https://css.show/images/profile.jpg';
+const PODCAST_IMAGE = 'https://css.show/images/profile.jpg';
 // const PODCAST_IMAGE =
 //   'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg';
 const generateRssItem = ({
@@ -37,7 +36,7 @@ const generateRssItem = ({
       <guid>${SITE_URL}/posts/${id}</guid>
       <pubDate>${new Date(date).toUTCString()}</pubDate>
       <description>
-        <![CDATA[${description || 'CSS Show'}]]>
+        <![CDATA[${description || title}]]>
       </description>
       <link>${SITE_URL}/posts/${id}</link>
       <itunes:explicit>${explicit || 'false'}</itunes:explicit>
@@ -55,8 +54,7 @@ const generateRssItem = ({
 
 const generateRss = (
   posts: Post[]
-): string => `<?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:anchor="https://anchor.fm/xmlns">
+): string => `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:anchor="https://anchor.fm/xmlns">
   <channel>
     <title><![CDATA[${PODCAST_NAME}]]></title>
     <description><![CDATA[${DESCRIPTION}]]></description>

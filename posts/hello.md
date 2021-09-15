@@ -1,5 +1,6 @@
 ---
-title: '大家好，The CSS Show 开播啦'
+title: '大家好，The CSS Show 节目开播啦'
+description: '一档以前端技术为中心，让天下没有难以理解的技术为口号的节目开播啦！'
 date: '2020-05-06'
 audioUrl: 'https://cdn.jsdelivr.net/gh/zhanghecool/podcasts@main/audio/hello.mp3'
 audioType: 'audio'
@@ -10,17 +11,4 @@ season: 1
 episode: 1
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
-
-You can use Static Generation for many types of pages, including:
-
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
-
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
-
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
-
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+The CSS Show 是一档以前端技术为中心，让天下没有难以理解的技术为口号的节目，以后会以博文、播客、小视频和公众号的形式和大家见面，希望大家多提宝贵意见，大家共同进步。
