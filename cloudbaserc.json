@@ -16,7 +16,7 @@
       "function": {
         "use": "@cloudbase/framework-plugin-function",
         "inputs": {
-          "functionRootPath": "cloudfunctions",
+          "functionRootPath": "./cloudfunctions",
           "functionDefaultConfig": {
             "timeout": 5,
             "runtime": "Nodejs10.15",
