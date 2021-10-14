@@ -24,9 +24,12 @@
           },
           "functions": [
             {
-              "getwxacodeunlimit": "getwxacodeunlimit"
+              "name": "getwxacodeunlimit"
             }
-          ]
+          ],
+          "servicePaths": {
+            "getwxacodeunlimit": "/getwxacodeunlimit"
+          }
         }
       }
     }
