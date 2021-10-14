@@ -10,7 +10,7 @@ import Date from '@/components/date';
 import Layout from '@/components/layout';
 import utilStyles from '@/styles/utils.module.scss';
 import { getSortedPostsData } from '@/lib/posts';
-import { getUserAuth } from '@/lib/cloudbase';
+import { getApp } from '@/lib/cloudbase';
 import generateRss from '@/lib/rss';
 import { useEffect } from 'react';
 
@@ -19,10 +19,22 @@ const Home = ({ allPostsData }) => {
   // const { t } = useTranslation('common');
   // console.info('T("title"): ', t('title'));
   useEffect(() => {
-    const auth = getUserAuth();
+    const app = getApp();
+
+    const auth = app.auth({
+      persistence: 'local',
+    });
     if (auth.hasLoginState()) {
       const user = auth.currentUser;
       console.info('User: ', user);
+      app
+        .callFunction({
+          name: 'getwxacodeunlimit',
+          data: {
+            a: 1,
+          },
+        })
+        .then((data) => console.info('Data: ', data));
     } else {
       // Email 和密码登录
       // auth
