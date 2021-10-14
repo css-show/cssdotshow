@@ -9,6 +9,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "@cloudbase/js-sdk": "^1.7.1",
     "bootstrap-icons": "^1.4.1",
     "classnames": "^2.3.1",
     "date-fns": "^2.21.1",
@@ -40,6 +41,12 @@
     "type": "git",
     "url": "https://github.com/zhanghecool/cssdotshow.git"
   },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
   "release": {
     "branches": [
       "main"

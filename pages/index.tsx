@@ -10,12 +10,25 @@ import Date from '@/components/date';
 import Layout from '@/components/layout';
 import utilStyles from '@/styles/utils.module.scss';
 import { getSortedPostsData } from '@/lib/posts';
+import { getUserAuth } from '@/lib/cloudbase';
 import generateRss from '@/lib/rss';
+import { useEffect } from 'react';
 
 const publicRssDirectory = path.join(process.cwd(), 'public', 'rss.xml');
 const Home = ({ allPostsData }) => {
   // const { t } = useTranslation('common');
   // console.info('T("title"): ', t('title'));
+  useEffect(() => {
+    const auth = getUserAuth();
+    if (auth.hasLoginState()) {
+      const user = auth.currentUser;
+      console.info('User: ', user);
+    } else {
+      auth
+        .signInWithEmailAndPassword('zhanghecool@outlook.com', '12345678qwer')
+        .then((info) => console.info('UserInfo: ', info));
+    }
+  }, []);
 
   return (
     <Layout>
