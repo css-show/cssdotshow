@@ -24,9 +24,33 @@ const Home = ({ allPostsData }) => {
       const user = auth.currentUser;
       console.info('User: ', user);
     } else {
+      // Email 和密码登录
+      // auth
+      //   .signInWithEmailAndPassword('zhanghecool@outlook.com', '12345678qwer')
+      //   .then((info) => console.info('UserInfo: ', info));
+
+      // 公众号授权登录
+      // const provider = auth.weixinAuthProvider({
+      //   appid: 'wxb10279b0c332f6d6',
+      //   scope: 'snsapi_login',
+      // });
+      // provider.getRedirectResult().then((loginState) => {
+      //   if (loginState) {
+      //     console.info('LoginState: ', loginState);
+      //   } else {
+      //     provider.signInWithRedirect();
+      //   }
+      // });
+
+      // 匿名登录
       auth
-        .signInWithEmailAndPassword('zhanghecool@outlook.com', '12345678qwer')
-        .then((info) => console.info('UserInfo: ', info));
+        .anonymousAuthProvider()
+        .signIn()
+        .then((loginState) => {
+          console.info('LoginState: ', loginState);
+          const user = auth.currentUser;
+          console.info('User: ', user);
+        });
     }
   }, []);
 
