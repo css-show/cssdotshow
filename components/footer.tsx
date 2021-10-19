@@ -28,11 +28,17 @@ export default function Footer({}: FooterProps) {
           © 2021 {title}
         </p>
         <p className="text-sm text-right text-gray-500 sm:pl-4 sm:py-2 sm:mt-0 mt-4 sm:ml-auto">
-          京ICP备16043114号-9
+          <Link href="https://beian.miit.gov.cn/">
+            <a target="_blank" rel="nofollow">
+              京ICP备16043114号-9
+            </a>
+          </Link>
           <br />
           Powered by{' '}
           <Link href="https://webify.cloudbase.net/">
-            <a>CloudBase Webify</a>
+            <a target="_blank" rel="nofollow">
+              CloudBase Webify
+            </a>
           </Link>
         </p>
       </div>

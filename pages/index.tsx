@@ -186,12 +186,12 @@ const Home = ({ allPostsData }) => {
           ))}
         </ul>
       </section>
-      <iframe
+      {/* <iframe
         id="openAI"
         width="400px"
         height="400px"
         src="https://openai.weixin.qq.com/webapp/yHt9uINofnL9KofPdQoJhFiH7Py5QB?robotName=The%20CSS%20Show&hcrt=1"
-      />
+      /> */}
     </Layout>
   );
 };
