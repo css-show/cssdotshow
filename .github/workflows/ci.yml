@@ -28,23 +28,19 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
-        run: |
-          yarn
-          npm install -g @cloudbase/cli
+        run: yarn
         
-      #- name: Install CloudBase-Cli
-        #run: yarn global add @cloudbase/cli
+      - name: Install CloudBase-Cli
+        run: npm install -g @cloudbase/cli
         
       - name: Build
-        run: |
-          yarn build
+        run: yarn build
           
       - name: Debug
-        run: |
-          ls out
+        run: ls out
           
       # - name: Release
         # env:
@@ -70,11 +66,14 @@ jobs:
           #secretId: ${{secrets.secretId}}
           #secretKey: ${{secrets.secretKey}}
           #envId: ${{secrets.envId}}
+          
+      - name: Login to Tencent CloudBase
+        env:
+          SECRET_ID: ${{secrets.secretId}}
+          SECRET_KEY: ${{secrets.secretKey}}
+        run: tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
+          
       - name: Deploy to Tencent CloudBase
         env:
           ENV_ID: ${{secrets.envId}}
-          SECRET_ID: ${{secrets.secretId}}
-          SECRET_KEY: ${{secrets.secretKey}}
-        run: |
-          tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
-          tcb framework deploy -e "$ENV_ID"
+        run: tcb framework deploy -e "$ENV_ID"
