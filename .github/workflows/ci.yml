@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           yarn
-          yarn global add @cloudbase/cli
+          npm install -g @cloudbase/cli
         
       #- name: Install CloudBase-Cli
         #run: yarn global add @cloudbase/cli
