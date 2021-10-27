@@ -31,8 +31,13 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: yarn
-
+        run: |
+          yarn
+          yarn global add @cloudbase/cli
+        
+      #- name: Install CloudBase-Cli
+        #run: yarn global add @cloudbase/cli
+        
       - name: Build
         run: |
           yarn build
@@ -56,12 +61,20 @@ jobs:
           # CLEAN: true
           # CLEAN_EXCLUDE: '["CNAME", ".nojekyll"]'
           
+      #- name: Deploy to Tencent CloudBase
+        #uses: TencentCloudBase/cloudbase-action@v2
+        #env:
+          #ENV_ID: ${{secrets.envId}}
+          #accessToken: ${{ secrets.accessToken }}
+        #with:
+          #secretId: ${{secrets.secretId}}
+          #secretKey: ${{secrets.secretKey}}
+          #envId: ${{secrets.envId}}
       - name: Deploy to Tencent CloudBase
-        uses: TencentCloudBase/cloudbase-action@v2
         env:
           ENV_ID: ${{secrets.envId}}
-          accessToken: ${{ secrets.accessToken }}
-        with:
-          secretId: ${{secrets.secretId}}
-          secretKey: ${{secrets.secretKey}}
-          envId: ${{secrets.envId}}
+          SECRET_ID: ${{secrets.secretId}}
+          SECRET_KEY: ${{secrets.secretKey}}
+        run: |
+          tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
+          tcb framework deploy -e "$ENV_ID"
