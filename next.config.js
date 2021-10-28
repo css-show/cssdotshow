@@ -12,6 +12,7 @@ const isProd = process.env.NODE_ENV === 'production';
 //   : undefined;
 
 module.exports = withPWA({
+  swcMinify: true,
   // i18n,
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.
