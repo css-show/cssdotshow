@@ -13,6 +13,9 @@ const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = withPWA({
   swcMinify: true,
+  experimental: {
+    urlImports: ['https://cdn.jsdelivr.net'],
+  },
   // i18n,
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.

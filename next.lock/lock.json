@@ -1,0 +1,5 @@
+{
+  "https://cdn.jsdelivr.net/npm/react": { "integrity": "sha512-N76bhctXwL+G/6Vze1IoewrSfAjmGm3oNmkjAjgJihCBD9M/z0m4F/dHqIGr5Jm1bSHLY35Q9NSfkNZ57OPkgw==", "contentType": "application/javascript; charset=utf-8" },
+  "https://cdn.jsdelivr.net/npm/react@17.0.2/index.min.js": { "integrity": "sha512-N76bhctXwL+G/6Vze1IoewrSfAjmGm3oNmkjAjgJihCBD9M/z0m4F/dHqIGr5Jm1bSHLY35Q9NSfkNZ57OPkgw==", "contentType": "application/javascript; charset=utf-8" },
+  "version": 1
+}
