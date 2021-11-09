@@ -36,13 +36,13 @@ jobs:
           node-version: 16
           cache: 'pnpm'
           
-      # - name: Cache npm package
-        # uses: actions/cache@v2
-        # with:
-          # path: ~/.npm
-          # key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          # restore-keys: |
-            # ${{ runner.os }}-node-
+      - name: Cache npm package
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: pnpm install
@@ -85,9 +85,9 @@ jobs:
         env:
           SECRET_ID: ${{secrets.secretId}}
           SECRET_KEY: ${{secrets.secretKey}}
-        run: tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
+        run: cloudbase login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
           
       - name: Deploy to Tencent CloudBase
         env:
           ENV_ID: ${{secrets.envId}}
-        run: tcb framework deploy -e "$ENV_ID"
+        run: cloudbase framework deploy -e "$ENV_ID"
