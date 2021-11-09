@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://css.show/">
-    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/public/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="200">
+    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/public/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="100">
   </a>
 </p>
 
@@ -9,10 +9,19 @@
 <p align="center">
   只需要一分钟就能学会，却要用一辈子的时间去精通
   <br>
-  <a href="https://css.show/"><strong>去学习 »</strong></a>
+  <a href="https://css.show/"><strong>去网站学习 »</strong></a>
   <br>
   <br>
 </p>
+
+# 开发流程
+
+- 本地安装 pnpm 包管理器
+- 安装依赖：`pnpm install`
+- 开发：`pnpm run dev`
+- 打包：`pnpm run build`
+
+# 书写文章
 
 ## 文章顶部 YML 配置说明
 
@@ -28,10 +37,9 @@ audioTime: 267
 season: 1
 episode: 1
 ---
-
 ```
 
-## YML 配置
+## YML 详细配置
 
 1. title: 标题（）
 2. date: 发表时间（）

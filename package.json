@@ -30,6 +30,7 @@
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.3",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "postcss": "^8.3.6",
@@ -39,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhanghecool/cssdotshow.git"
+    "url": "git+https://github.com/zhanghecool/cssdotshow.git"
   },
   "browserslist": [
     ">0.3%",
@@ -96,5 +97,19 @@
         }
       ]
     ]
-  }
+  },
+  "description": "<p align=\"center\">   <a href=\"https://css.show/\">     <img src=\"https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/public/images/CSSSHOW.svg\" alt=\"CSSSHOW Logo\" width=\"200\">   </a> </p>",
+  "bugs": {
+    "url": "https://github.com/zhanghecool/cssdotshow/issues"
+  },
+  "homepage": "https://github.com/zhanghecool/cssdotshow#readme",
+  "main": "next-i18next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "zhanghe",
+  "license": "ISC"
 }
