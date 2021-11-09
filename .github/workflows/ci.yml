@@ -19,6 +19,8 @@ jobs:
   build-and-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    container:
+      image: tencentcloudbase/cloudbase-framework-runner:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,19 +38,19 @@ jobs:
           node-version: 16
           cache: 'pnpm'
           
-      - name: Cache npm package
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Cache npm package
+        # uses: actions/cache@v2
+        # with:
+          # path: ~/.npm
+          # key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          # restore-keys: |
+            # ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: pnpm install
         
-      - name: Install CloudBase-Cli
-        run: pnpm add --global @cloudbase/cli
+      # - name: Install CloudBase-Cli
+        # run: pnpm add --global @cloudbase/cli
         
       - name: Build
         run: pnpm build
