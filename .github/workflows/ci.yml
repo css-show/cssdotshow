@@ -37,17 +37,6 @@ jobs:
         with:
           node-version: 16
           cache: 'pnpm'
-          
-      # - name: Cache npm package
-        # uses: actions/cache@v2
-        # with:
-          # path: ~/.npm
-          # key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          # restore-keys: |
-            # ${{ runner.os }}-node-
-        
-      - name: Global install CloudBase-Cli
-        run: pnpm add --global @cloudbase/cli
 
       - name: Install dependencies
         run: pnpm install
@@ -82,6 +71,18 @@ jobs:
           #secretId: ${{secrets.secretId}}
           #secretKey: ${{secrets.secretKey}}
           #envId: ${{secrets.envId}}
+          
+      # - name: Cache npm package
+        # uses: actions/cache@v2
+        # with:
+          # path: ~/.npm
+          # key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          # restore-keys: |
+            # ${{ runner.os }}-node-
+        
+      - name: Global install CloudBase-Cli
+        # run: pnpm add --global @cloudbase/cli
+        run: sudo npm install -g @cloudbase/cli --loglevel=error | grep @cloudbase/cli@
           
       - name: Login to Tencent CloudBase
         env:
