@@ -47,7 +47,7 @@ jobs:
             # ${{ runner.os }}-node-
         
       - name: Global install CloudBase-Cli
-        run: npm install --global @cloudbase/cli
+        run: pnpm add --global @cloudbase/cli
 
       - name: Install dependencies
         run: pnpm install
@@ -55,8 +55,8 @@ jobs:
       - name: Build
         run: pnpm build
           
-      - name: Debug
-        run: ls out
+      # - name: Debug
+        # run: ls out
           
       # - name: Release
         # env:
@@ -87,9 +87,12 @@ jobs:
         env:
           SECRET_ID: ${{secrets.secretId}}
           SECRET_KEY: ${{secrets.secretKey}}
-        run: cloudbase login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
+        run: tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
+          
+      - name: Clear npm cache
+        run: npm cache clear --force
           
       - name: Deploy to Tencent CloudBase
         env:
           ENV_ID: ${{secrets.envId}}
-        run: cloudbase framework deploy -e "$ENV_ID"
+        run: tcb framework deploy -e "$ENV_ID"
