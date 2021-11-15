@@ -6,37 +6,43 @@
     "dev": "next dev -p 8008",
     "build": "next build && next export",
     "lint": "next lint",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@cloudbase/js-sdk": "^1.7.1",
-    "bootstrap-icons": "^1.4.1",
+    "bootstrap-icons": "^1.7.0",
     "classnames": "^2.3.1",
-    "date-fns": "^2.21.1",
+    "date-fns": "^2.25.0",
     "gray-matter": "^4.0.3",
-    "next": "^12.0.1",
-    "next-i18next": "^8.6.0",
-    "next-pwa": "^5.2.24",
+    "next": "^12.0.3",
+    "next-i18next": "^8.10.0",
+    "next-pwa": "^5.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "remark": "^13.0.0",
-    "remark-html": "^13.0.1",
-    "rxjs": "^7.0.0",
-    "sass": "^1.32.8"
+    "remark-html": "^13.0.2",
+    "rxjs": "^7.4.0",
+    "sass": "^1.43.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
     "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@types/node": "^14.14.37",
-    "@types/react": "^17.0.3",
-    "autoprefixer": "^10.3.1",
+    "@semantic-release/git": "^9.0.1",
+    "@types/node": "^14.17.33",
+    "@types/react": "^17.0.34",
+    "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
-    "postcss": "^8.3.6",
-    "semantic-release": "^17.4.5",
-    "tailwindcss": "^2.2.7",
-    "typescript": "^4.2.3"
+    "husky": "^7.0.4",
+    "postcss": "^8.3.11",
+    "semantic-release": "^17.4.7",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
   },
   "repository": {
     "type": "git",
@@ -48,6 +54,11 @@
     "not dead",
     "not op_mini all"
   ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
   "release": {
     "branches": [
       "main"
@@ -98,12 +109,15 @@
       ]
     ]
   },
-  "description": "<p align=\"center\">   <a href=\"https://css.show/\">     <img src=\"https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/public/images/CSSSHOW.svg\" alt=\"CSSSHOW Logo\" width=\"200\">   </a> </p>",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "bugs": {
     "url": "https://github.com/zhanghecool/cssdotshow/issues"
   },
   "homepage": "https://github.com/zhanghecool/cssdotshow#readme",
-  "main": "next-i18next.config.js",
   "directories": {
     "lib": "lib"
   },
