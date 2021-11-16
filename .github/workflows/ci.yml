@@ -38,11 +38,11 @@ jobs:
           node-version: 16
           cache: 'pnpm'
 
-      - name: Install dependencies
-        run: pnpm install
+      # - name: Install dependencies
+        # run: pnpm install
         
-      - name: Build
-        run: pnpm build
+      # - name: Build
+        # run: pnpm build
           
       # - name: Debug
         # run: ls out
@@ -81,8 +81,8 @@ jobs:
             # ${{ runner.os }}-node-
         
       - name: Global install CloudBase-Cli
-        # run: pnpm add --global @cloudbase/cli
-        run: sudo npm install -g @cloudbase/cli --loglevel=error | grep @cloudbase/cli@
+        run: pnpm add --global @cloudbase/cli
+        # run: sudo npm install -g @cloudbase/cli --loglevel=error | grep @cloudbase/cli@
           
       - name: Login to Tencent CloudBase
         env:
