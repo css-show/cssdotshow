@@ -9,6 +9,8 @@
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
+          "installCommand": "pnpm install",
+          "buildCommand": "pnpm build",
           "outputPath": "out",
           "ignore": [".git", ".github", "node_modules", "cloudbaserc.js"]
         }
@@ -20,7 +22,7 @@
           "functionDefaultConfig": {
             "timeout": 5,
             "runtime": "Nodejs10.15",
-            "memorySize": 128
+            "memorySize": 64
           },
           "functions": [
             {
