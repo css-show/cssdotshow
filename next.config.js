@@ -13,9 +13,9 @@ const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = withPWA({
   swcMinify: true,
-  experimental: {
-    urlImports: ['https://cdn.jsdelivr.net'],
-  },
+  // experimental: {
+  //   urlImports: ['https://cdn.jsdelivr.net'],
+  // },
   // i18n,
   reactStrictMode: true,
   // Use the CDN in production and localhost for development.
@@ -31,6 +31,11 @@ module.exports = withPWA({
     dest: 'public',
     runtimeCaching,
     disable: !isProd,
+    buildExcludes: [
+      /middleware-manifest\.json$/,
+      /_middleware.js$/,
+      /_middleware.js.map$/,
+    ],
     // fallbacks: {
     // image: '/static/images/fallback.png',
     // document: '/other-offline',  // if you want to fallback to a custom page other than /_offline
