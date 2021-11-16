@@ -90,9 +90,6 @@ jobs:
           SECRET_KEY: ${{secrets.secretKey}}
         run: tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
           
-      - name: Clear npm cache
-        run: npm cache clear --force
-          
       - name: Deploy to Tencent CloudBase
         env:
           ENV_ID: ${{secrets.envId}}
