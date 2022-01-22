@@ -33,13 +33,13 @@ export default function Footer({}: FooterProps) {
               京ICP备16043114号-9
             </a>
           </Link>
-          <br />
+          {/* <br />
           Powered by{' '}
           <Link href="https://webify.cloudbase.net/">
             <a target="_blank" rel="nofollow">
               CloudBase Webify
             </a>
-          </Link>
+          </Link> */}
         </p>
       </div>
     </footer>
