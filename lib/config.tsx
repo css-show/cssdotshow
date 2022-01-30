@@ -1,2 +1,2 @@
 export const title = 'THE CSS SHOW';
-export const slogan = '只需要一分钟就能学会，却要用一辈子的时间去精通';
+export const slogan = 'Learn to code — for free.';

@@ -2,7 +2,7 @@ const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 // const { i18n } = require('./next-i18next.config');
 const isProd = process.env.NODE_ENV === 'production';
-// const cdnPath = 'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages';
+// const cdnPath = 'https://cdn.jsdelivr.net/gh/css-show/cssdotshow@gh-pages';
 // const path = isProd ? cdnPath : '';
 // const imageConfig = isProd
 //   ? {

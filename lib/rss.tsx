@@ -11,7 +11,7 @@ const CATEGORY = 'Technology';
 const TYPE = 'serial'; // episodic，serial
 const PODCAST_IMAGE = 'https://css.show/images/profile.jpg';
 // const PODCAST_IMAGE =
-//   'https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@gh-pages/images/profile.jpg';
+//   'https://cdn.jsdelivr.net/gh/css-show/cssdotshow@gh-pages/images/profile.jpg';
 const generateRssItem = ({
   title,
   audioUrl,

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://css.show/">
-    <img src="https://cdn.jsdelivr.net/gh/zhanghecool/cssdotshow@main/public/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="100">
+    <img src="https://cdn.jsdelivr.net/gh/css-show/cssdotshow@main/public/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="100">
   </a>
 </p>
 
@@ -69,9 +69,9 @@ episode: 1
 | season        |  Episode season number   |        1 |
 | episode       |    An episode number     |        1 |
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/zhanghecool/cssdotshow)
-[![CI](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml/badge.svg)](https://github.com/zhanghecool/cssdotshow/actions/workflows/ci.yml)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/css-show/cssdotshow)
+[![CI](https://github.com/css-show/cssdotshow/actions/workflows/ci.yml/badge.svg)](https://github.com/css-show/cssdotshow/actions/workflows/ci.yml)
 
 ## Author
 
-[@zhanghecool](https://github.com/zhanghecool)
+[@css-show](https://github.com/css-show)
