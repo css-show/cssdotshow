@@ -1,130 +1,32 @@
 {
-  "name": "cssdotshow",
-  "version": "1.1.0",
   "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
   "scripts": {
-    "dev": "next dev -p 8008",
-    "build": "next build && next export",
-    "lint": "next lint",
-    "semantic-release": "semantic-release",
-    "commit": "git-cz"
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build"
   },
   "dependencies": {
-    "@cloudbase/js-sdk": "^1.7.1",
-    "classnames": "^2.3.1",
-    "date-fns": "^2.27.0",
-    "gray-matter": "^4.0.3",
-    "next": "^12.0.7",
-    "next-i18next": "^8.10.0",
-    "next-pwa": "^5.4.4",
+    "@remix-run/react": "^1.1.3",
+    "@remix-run/serve": "^1.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.2",
-    "rxjs": "^7.4.0",
-    "sass": "^1.45.0"
+    "remix": "^1.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.1",
-    "@types/node": "^14.18.1",
-    "@types/react": "^17.0.37",
-    "autoprefixer": "^10.4.0",
-    "babel-loader": "^8.2.3",
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
-    "husky": "^7.0.4",
-    "postcss": "^8.4.5",
-    "semantic-release": "^17.4.7",
-    "tailwindcss": "^2.2.19",
-    "typescript": "^4.5.4",
-    "webpack": "^5.65.0"
+    "@cloudbase/cli": "^1.12.0",
+    "@remix-run/dev": "^1.1.3",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "rxjs": "^7.5.4",
+    "scheduler": "^0.20.2",
+    "typescript": "^4.1.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhanghecool/cssdotshow.git"
+  "engines": {
+    "node": ">=14"
   },
-  "browserslist": [
-    ">0.3%",
-    "not ie 11",
-    "not dead",
-    "not op_mini all"
-  ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
-    }
-  },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogTitle": "The CSS Show 变更如下："
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            {
-              "path": "./out",
-              "label": "The CSS Show",
-              "name": "css.show files"
-            }
-          ]
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "components/*",
-            "lib/*",
-            "pages/*",
-            "posts/*",
-            "public/*",
-            "styles/*",
-            "CHANGELOG.md",
-            "package.json",
-            "yarn.lock"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ]
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
-  "bugs": {
-    "url": "https://github.com/zhanghecool/cssdotshow/issues"
-  },
-  "homepage": "https://github.com/zhanghecool/cssdotshow#readme",
-  "directories": {
-    "lib": "lib"
-  },
-  "keywords": [
-    "css"
-  ],
-  "author": "zhanghe",
-  "license": "ISC"
+  "sideEffects": false
 }
