@@ -9,8 +9,8 @@
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-          "installCommand": "",
-          "buildCommand": "",
+          "installCommand": " ",
+          "buildCommand": " ",
           "outputPath": "public",
           "cloudPath": "/public",
           "ignore": [".git", ".github", "node_modules", "cloudbaserc.js"]
