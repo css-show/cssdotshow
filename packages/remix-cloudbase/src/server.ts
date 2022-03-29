@@ -55,7 +55,7 @@ export function createRequestHandler({
       typeof getLoadContext === 'function' ? getLoadContext(event) : undefined;
 
     let response = (await handleRequest(
-      request as unknown as NodeRequest,
+      request as unknown as Request,
       loadContext
     )) as unknown as NodeResponse;
 

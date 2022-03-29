@@ -14,6 +14,10 @@
     "url": "https://github.com/css-show/cssdotshow",
     "directory": "packages/remix-cloudbase"
   },
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "dependencies": {
     "@remix-run/node": "^1.3.2",
     "@remix-run/server-runtime": "^1.3.2"

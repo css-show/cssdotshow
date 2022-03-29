@@ -1,17 +1,11 @@
 {
-  "exclude": ["__tests__"],
+  "extends": "../../tsconfig.json",
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
-    "lib": ["ES2019", "DOM.Iterable"],
-    "target": "ES2019",
-
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-
+    "baseUrl": ".",
     "declaration": true,
-    "emitDeclarationOnly": true,
-
-    "outDir": "./dist",
-    "rootDir": "."
+    "declarationMap": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist"
   }
 }
