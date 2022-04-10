@@ -64,7 +64,7 @@ jobs:
           SECRET_KEY: ${{secrets.SECRETKEY}}
         run: tcb login --apiKeyId "$SECRET_ID" --apiKey "$SECRET_KEY"
           
-      - run: cd packages/web
+      - run: cd apps/web-app
       
       - name: Deploy to Tencent CloudBase
         env:
