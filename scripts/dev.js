@@ -3,7 +3,7 @@ import { fuzzyMatchTarget } from './utils.js';
 import minimist from 'minimist';
 
 const args = minimist(process.argv.slice(2));
-const target = args._.length ? fuzzyMatchTarget(args._)[0] : 'core';
+const target = args._.length ? fuzzyMatchTarget(args._)[0] : 'web-app';
 const formats = args.formats || args.f;
 const sourceMap = args.sourcemap || args.s;
 const { stdout } = await execa('git', ['rev-parse', 'HEAD']);

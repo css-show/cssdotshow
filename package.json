@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "node --experimental-json-modules scripts/build.js",
+    "dev": "node --experimental-json-modules scripts/dev.js",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm build && pnpm release:only",
