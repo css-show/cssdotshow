@@ -1,6 +1,6 @@
 {
   "name": "@css-show/remix-cloudbase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cloudbase server request handler for Remix",
   "main": "dist/remix-cloudbase.cjs.js",
   "module": "dist/remix-cloudbase.esm.js",
