@@ -38,8 +38,8 @@ jobs:
           node-version: 16
           cache: 'pnpm'
           
-      - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      # - name: Setup npmrc
+        # run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
         
       - name: Install Dependencies
         run: pnpm install
