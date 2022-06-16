@@ -1,77 +1,34 @@
-<p align="center">
-  <a href="https://css.show/">
-    <img src="https://cdn.jsdelivr.net/gh/css-show/cssdotshow@main/public/images/CSSSHOW.svg" alt="CSSSHOW Logo" width="100">
-  </a>
-</p>
+# Welcome to Remix!
 
-<h3 align="center">The CSS Show</h3>
+- [Remix Docs](https://remix.run/docs)
 
-<p align="center">
-  只需要一分钟就能学会，却要用一辈子的时间去精通
-  <br>
-  <a href="https://css.show/"><strong>去网站学习 »</strong></a>
-  <br>
-  <br>
-</p>
+## Deployment
 
-# 开发流程
+After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
 
-- 本地安装 pnpm 包管理器
-- 安装依赖：`pnpm install`
-- 开发：`pnpm run dev`
-- 打包：`pnpm run build`
+If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
 
-# 书写文章
-
-## 文章顶部 YML 配置说明
-
-```yml
----
-title: '你好，CSS'
-date: '2020-05-06'
-audioUrl: ''
-audioType: 'audio'
-audioTypeName: 'mpeg'
-audioLength: 6903400
-audioTime: 267
-season: 1
-episode: 1
----
+```sh
+npm i -g vercel
+vercel
 ```
 
-## YML 详细配置
+It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
 
-1. title: 标题（）
-2. date: 发表时间（）
-3. audioUrl: 媒体地址（支持的文件格式包括 M4A，MP3，MOV，MP4，M4V 和 PDF）
-4. audioType: 媒体类型（audio, video, application）
-5. audioTypeName: 媒体类型名字（x-m4a, mpeg, quicktime, mp4, x-m4v, pdf）/_ audio/x-m4a, audio/mpeg, video/quicktime, video/mp4, video/x-m4v, and application/pdf _/
-6. audioLength: 媒体大小（在 Mac 上，选择“文件”>“获取信息”，然后参考“大小”字段）
-7. image: 文章封面地址（）
-8. description: 介绍（）
-9. explicit: 成人内容（true, false）
-10. audioTime: 媒体时长（秒）
-11. season: 剧集季号（1, 2, 3）
-12. episode: 剧集编号（1, 2, 3）
+## Development
 
-| Name          |       Description        | Defaults |
-| ------------- | :----------------------: | -------: |
-| title         |      Article title       |          |
-| description   |   Article description    |          |
-| date          | Article publication time |          |
-| audioUrl      |        Media url         |          |
-| audioType     |        Media type        |    audio |
-| audioTypeName |     Media type name      |     mpeg |
-| audioLength   |        Media size        |     mpeg |
-| image         |      Article cover       |          |
-| explicit      |      Adult content       |    false |
-| audioTime     |      Media duration      |          |
-| season        |  Episode season number   |        1 |
-| episode       |    An episode number     |        1 |
+To run your Remix app locally, make sure your project's local dependencies are installed:
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/css-show/cssdotshow)
-[![CI](https://github.com/css-show/cssdotshow/actions/workflows/ci.yml/badge.svg)](https://github.com/css-show/cssdotshow/actions/workflows/ci.yml)
+```sh
+npm install
+```
 
-## Author
+Afterwards, start the Remix development server like so:
 
-[@css-show](https://github.com/css-show)
+```sh
+npm run dev
+```
+
+Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
+
+If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
